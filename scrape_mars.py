@@ -98,11 +98,15 @@ def scrape():
 
     # Load Mars Facts table
     facts_table = pd.read_html("https://space-facts.com/mars/")[0]
-    facts_str = facts_table.to_html()
+    facts_str = facts_table.to_html(index=False, header=False)
 
     table_file = "/table.html"
 
     text_file = open("templates" + table_file, "w")
+
+    html_head = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Mars Table</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>'
+
+    facts_str = html_head + facts_str
     text_file.write(facts_str)
     text_file.close()
 

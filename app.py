@@ -28,5 +28,9 @@ def scraper():
     mars_data.update({}, update_data, upsert=True)
     return (redirect("/", code=302))
 
+@app.route('/table.html')
+def table():
+    return render_template('table.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
