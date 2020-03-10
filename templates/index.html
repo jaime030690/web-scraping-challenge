@@ -35,16 +35,19 @@
     <div class="container">
       <div class="row">
         <!--Image-->
-        <div class="col-lg-8">
+        <div class="col-lg-6">
         <h1 class="text-left">Featured Mars Image</h1>
-        <img src="{{data.featured_image_url}}" class="img-fluid" alt="Featured image" style="width: 500px; height: auto;">
+        <img src="{{data.featured_image_url}}" class="img-fluid" alt="Featured image" style="width: 400px; height: auto;">
         </div>
 
         <!--Weather and facts-->
-        <div class="col-lg-4">
+        <div class="col-lg-6">
           <!--Weather card-->
-        
+          <h1>Mars Weather</h1>
+          <p>Couldn't scrape the actual data, but hey here's an embedded Tweet!</p>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">InSight sol 455 (2020-03-08) low -95.4ºC (-139.8ºF) high -13.0ºC (8.5ºF)<br>winds from the SSE at 6.0 m/s (13.5 mph) gusting to 20.7 m/s (46.2 mph)<br>pressure at 6.40 hPa <a href="https://t.co/HrRcPTpSEQ">pic.twitter.com/HrRcPTpSEQ</a></p>&mdash; Mars Weather (@MarsWxReport) <a href="https://twitter.com/MarsWxReport/status/1236756368335519745?ref_src=twsrc%5Etfw">March 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <!--Table-->
+          <h1>Mars Facts!</h1>
           <div class="embed-responsive embed-responsive-4by3">
             <iframe class="embed-responsive-item" src={{data.facts_str}}></iframe>
           </div>
