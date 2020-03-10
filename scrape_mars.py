@@ -100,6 +100,12 @@ def scrape():
     facts_table = pd.read_html("https://space-facts.com/mars/")[0]
     facts_str = facts_table.to_html()
 
+    table_file = "/table.html"
+
+    text_file = open("templates" + table_file, "w")
+    text_file.write(facts_str)
+    text_file.close()
+
     '''
     
      Mars Hemispheres
@@ -143,7 +149,7 @@ def scrape():
         "news_p": news_p,
         "featured_image_url": featured_image_url,
         "mars_weather": '',
-        "facts_str": facts_str,
+        "facts_str": table_file,
         "hemisphere_image_urls": hemisphere_image_urls
     }
 
